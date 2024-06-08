@@ -1,0 +1,708 @@
+/* global */
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   
+}
+:root {
+    --main-color: rgb(237 86 59); ;
+    --sec-color: white;
+    --main-transition:0.3s;
+    --main-paragraph:  rgba(105, 101, 101, 0.733);
+} 
+html {
+    scroll-behavior: smooth;
+}
+body {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+   
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+@media (min-width:768px) {
+
+    .container {
+       width: 750px;
+    }
+}
+@media (min-width:992px) {
+
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+
+    .container {
+       width: 1170px;
+    }
+    }
+   
+/* global */
+/* nav bar */
+.nav-bar {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #767a8065;
+    width: 100%;
+    
+}
+.nav-bar .container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.nav-bar .container .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.nav-bar .container .logo span {
+    color:var(--main-color);
+}
+.nav-bar .container ul  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  
+}
+.nav-bar .container ul  li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+.nav-bar .container ul  li a:hover {
+    color:var(--main-color);
+}
+.nav-bar .container ul  .active {
+    color:var(--main-color);
+}
+
+.nav-bar .container ul button {
+    padding: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    background-color: var(--main-color);
+    font-weight: 600;
+    border: none;
+    transition: var();
+    cursor: pointer;
+}
+.nav-bar .container ul button:hover {
+   background-color:var(--main-color);
+}
+/* nav bar */
+/* caption */
+.caption {
+ z-index: 1;
+   text-align: center;
+    position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50% );
+   text-align: center;
+   color: white;
+   
+}
+.caption h6 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.caption h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.caption  span {
+    color:var(--main-color);
+}
+.caption  button {
+    padding: 20px 30px;
+    background-color:var(--main-color);
+    
+    font-weight: 600;
+    border: none;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.caption  button a {
+    color: white;
+}
+.caption  button:hover {
+    background-color: var(--main-color);
+}
+
+
+/* caption */
+/* <!-- dynamic and overlay --> */
+.head .dynamic-background {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+   
+}
+.head .dynamic-background::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(35, 45, 57, 0.8);
+}
+.head .dynamic-background video {
+   height: 100vh;
+    
+    max-width: 100%;  
+    object-fit: cover;
+
+}
+/* <!-- dynamic and overlay --> */
+/* about-programs */
+
+.about-programs {
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 100px;
+    
+    }
+    .about-programs .container  .title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    .about-programs .container  .title h3 {
+        font-size: 30px;
+    }
+    .about-programs .container  .title span {
+        color: var(--main-color);
+    }
+    .about-programs .container  .title p {
+        width: 70%;
+        line-height: 1.5;
+        font-size: 18px;
+        font-weight: 500;
+        color:var(--main-paragraph);
+    }
+.programs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.programs .first-type {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+.programs .first-type  .box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.programs .first-type  .box  .program {
+    line-height: 1.7;
+}
+.programs .first-type  .box  .program h4 {
+    font-size: 22px;
+}
+.programs .first-type  .box  .program  p {
+    font-weight: 400;
+    color: var(--main-paragraph);
+}
+.programs .first-type  .box  .program span a{
+    color: orangered;
+}
+.programs .first-type  .box  .program span a:hover {
+    text-decoration: underline;
+}
+/* ------sec type------ */
+.programs .second-type  {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.programs .second-type  .box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.programs .second-type  .box  .program {
+    line-height: 1.7;
+}
+.programs .second-type  .box  .program h4 {
+    font-size: 22px;
+}
+.programs .second-type  .box  .program  p {
+    font-weight: 400;
+    color: var(--main-paragraph);
+}
+.programs .second-type  .box  .program span a{
+    color: orangered;
+}
+.programs .second-type  .box  .program span a:hover {
+    text-decoration: underline;
+}
+/* about-programs */
+
+.mot-sec {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.mot-sec {
+    width: 100%;
+    height: 100%;
+  background-image: url(/images/cta-bg.jpg);
+  padding: 120px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+.mot-sec .info {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 15px;
+    text-align: center;
+    line-height: 2;
+}
+.mot-sec .info h3{
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+
+}
+.mot-sec .info span {
+    color: var(--main-color);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.mot-sec .info p {
+   width: 50%;
+    color: var(--sec-color);
+    font-size: 18px;
+    text-align: center;
+}
+.mot-sec .info button {
+    padding: 20px 30px;
+    background-color:var(--main-color);
+    margin-top: 25px;
+    font-weight: 600;
+    border: none;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.mot-sec .info button a {
+    color: var(--sec-color);
+}
+
+/* 
+classes-section */
+.classes-section  {
+ width: 100%;
+ min-height: 100vh;
+ margin-bottom: 100px;
+
+}
+.classes-section .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+ .classes-section  .title h3 {
+    font-size: 30px;
+}
+ .classes-section  .title span {
+    color: var(--main-color);
+}
+ .classes-section  .title p {
+    width: 50%;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 500;
+    color:var(--main-paragraph);
+}
+.classes-section .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.classes-section .container .ex {
+    min-width: 35%;
+}
+.classes-section .container ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+
+}
+.classes-section .container ul  li {
+    background-color: rgba(255, 255, 255, 0.473);
+    padding: 35px 50px;
+    display: flex;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    transition: var(--main-transition);
+
+
+} 
+.classes-section .container ul  li:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+.classes-section .container ul  .active {
+    color: var(--main-color);
+}
+.classes-section .container ul  i {
+    color: var(--main-color);
+    font-size: 26px;
+}
+.classes-section .container ul button {
+    padding: 25px 40px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+    border: none;
+    background-color: rgba(248, 71, 6, 0.904);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+     transition: var(--main-transition);
+}
+.classes-section .container ul button a {
+    color: var(--sec-color);
+}
+.classes-section .container ul button:hover {
+    background-color: orangered;
+}
+.classes-section .container .info {
+    flex: 1;
+}
+.classes-section .container .info .image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.classes-section .container .info .image img {
+    max-width: 100%;
+}
+.classes-section .container .info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+.classes-section .container .info p  {
+    width: 80%;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 500;
+    color:var(--main-paragraph);
+    margin-bottom: 20px;
+}
+.classes-section .container .info  button{
+    padding: 15px 25px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+    border: none;
+    background-color: rgba(248, 71, 6, 0.904);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+.classes-section .container .info  button a {
+    color: var(--sec-color);
+}
+.classes-section .container .info  button:hover {
+    background-color: var(--main-color);
+}
+/* 
+classes-section */
+.schedules {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/schedule-bg.jpg);
+    padding: 50px;
+    color: var(--sec-color);
+    margin-bottom: 100px;
+}
+.schedules .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    margin-bottom: 80px;
+    color: white;
+}
+ .schedules  .title h3 {
+    font-size: 30px;
+}
+ .schedules  .title span {
+    color: var(--main-color);
+}
+ .schedules  .title p {
+    width: 50%;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 500;
+    color:var(--sec-color);
+}
+.schedules .days {
+    justify-content: center;
+    gap: 35px;
+    display: flex;
+    margin-bottom: 35px;
+    
+}
+.schedules .days ul {
+    display: flex;
+    gap: 20px;
+}
+.schedules .days ul li {
+cursor: pointer;
+}
+.schedules .days ul li i {
+     color: var(--sec-color);
+     margin-left: 10px;
+}
+.schedules .days .active {
+    color: var(--main-color);
+}
+
+.schedules table {
+   border-spacing: 0;
+    margin: auto;
+   text-align: center;
+   margin-bottom: 100px;
+}
+.schedules table td {
+    border: 0.5px solid white;
+    padding: 40px;
+}
+/* trainers  */
+.Trainers {
+    width: 100%;
+    margin-bottom: 100px;
+    min-height: 100vh;
+}
+.Trainers .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.Trainers .title h3 {
+    font-size: 30px;
+}
+
+.Trainers .title span {
+    color: var(--main-color);
+}
+.Trainers .title p {
+    width: 70%;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 500;
+    color:var(--main-paragraph);
+}
+
+.Trainers .container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+    gap: 35px;
+}
+.Trainers .container .box {
+   border-radius: 8px;
+   padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 3px 8px;
+}
+.Trainers .container .box .image img {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+.Trainers .container .box span {
+    color: var(--main-color);
+    margin-bottom: 20px;
+    display: block;
+}
+.Trainers .container .box h4 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.Trainers .container .box p {
+    color: var(--main-paragraph);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.Trainers .container .box i {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.671);
+    margin-right: 10px;
+}
+.Trainers .container .box i:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+/* trainers  */
+.contact {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    min-height: 70vh;
+ 
+    
+    
+}
+.contact .map-location {
+    width: 50%;
+
+}
+.contact .map-location iframe {
+    width: 100%;
+    height: 100%;
+}
+.contact .Form {
+    flex: 1;
+    background-image: url(/images/contact-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .Form  form {
+    background-color: white;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact .Form  form input {
+    border-color:  rgba(0, 0, 0, 0.185);
+    padding: 10px;
+    outline: 0;
+    font-size: 14px;
+
+}
+.contact .Form  form .name {
+    display: flex;
+    gap: 25px;
+  
+}
+.contact .Form  form .name input {
+    width: 100%;
+}
+.contact .Form  form  textarea {
+    width: 100%;
+    height: 150px;
+    border-color:  rgba(0, 0, 0, 0.185);
+    padding: 10px;
+    outline: 0;
+    appearance: none;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.contact .Form  form  button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--sec-color);
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    overflow: auto;
+}
+.contact .Form  form  button:hover {
+    background-color: orangered;
+}
+ p {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 14px;
+    color: var(--main-paragraph);
+}
+p span {
+    color: var(--main-color);
+}
+
+
+/* ----responsive---- */
+@media (max-width:900px) {
+    .contact {
+        flex-direction: column-reverse;
+        min-height: 100vh;
+    }
+    .contact .map-location  {
+        width: 100%;
+        height: 200px;
+
+    }
+    .contact .Form {
+    flex-grow: none;
+    height: 50%;
+    }
+}
+
+@media (max-width:600px) {
+    .caption h2  {
+        font-size: 30px;
+    }
+    .caption h6 {
+        font-size: 18px;
+    }
+    .caption  button {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    .programs  {
+        flex-direction: column;
+    }
+}
